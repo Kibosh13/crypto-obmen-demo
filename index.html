@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noimageindex" />
+    <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet,noimageindex" />
+    <meta name="description" content="Статическая демонстрация интерфейса криптообменника." />
+    <title>Название — демонстрация обменника</title>
+    <link rel="icon" href="./assets/favicon.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="site-shell">
+      <div class="hero-art" aria-hidden="true"></div>
+      <header class="header page-width">
+        <a class="brand" href="#top" aria-label="Название обменника"><i>Н</i><span>Название</span></a>
+        <nav aria-label="Основная навигация">
+          <a href="#exchange">Обмен</a><a href="#how">Как это работает</a><a href="#rates">Курсы</a>
+        </nav>
+        <a class="admin-link" href="./admin/">Админ-демо <span>↗</span></a>
+      </header>
+
+      <section id="top" class="hero page-width">
+        <div class="hero-copy">
+          <p class="eyebrow"><i></i> Обмен без лишних движений</p>
+          <h1>Крипта<br />на ваших<br /><em>условиях.</em></h1>
+          <p class="hero-text">Рассчитайте обмен и познакомьтесь с интерфейсом. В статической демонстрации заявки никуда не отправляются.</p>
+          <div class="trust-row"><span>✓ Курс виден заранее</span><span class="online">Демо-режим</span></div>
+        </div>
+
+        <section id="exchange" class="exchange-card" aria-labelledby="calculator-title">
+          <div class="card-title"><div><small>Калькулятор</small><h2 id="calculator-title">Рассчитайте обмен</h2></div><span class="rate-live"><i></i> Демо-курс</span></div>
+          <label class="currency-field" for="amount"><span>Вы отдаёте</span><div><input id="amount" inputmode="decimal" value="1000" aria-label="Сумма обмена" /><label class="select-wrap"><b id="fromCoin" class="coin usdt">U</b><strong id="fromCurrency">USDT</strong><span>⌄</span><select id="direction" aria-label="Направление обмена"></select></label></div><small id="amountHint"></small></label>
+          <button id="swap" class="swap" type="button" aria-label="Поменять направление">↓</button>
+          <div class="currency-field"><span>Вы получаете</span><div><output id="result">91 197</output><div class="static-currency"><b id="toCoin" class="coin rub">R</b><strong id="toCurrency">RUB</strong></div></div></div>
+          <div class="rate-info"><p><span>Демо-курс</span><strong id="rate">1 USDT = 91,84 RUB</strong></p><p><span>Комиссия</span><strong id="fee">0,7% · уже учтена</strong></p></div>
+          <button id="openModal" class="primary-button" type="button">Продолжить обмен <span>→</span></button>
+          <p class="card-note">Форма работает только как интерфейсная демонстрация</p>
+        </section>
+      </section>
+
+      <div class="ticker" aria-hidden="true"><div><span>USDT / RUB&nbsp; 91,84 <i></i></span><span>BTC / RUB&nbsp; 6 942 550 <i></i></span><span>ETH / RUB&nbsp; 318 420 <i></i></span><span>USDT / RUB&nbsp; 91,84 <i></i></span><span>BTC / RUB&nbsp; 6 942 550 <i></i></span></div></div>
+
+      <section class="light-surface">
+        <section class="benefits page-width">
+          <div class="section-heading"><small>Почему «Название»</small><h2>Результат известен<br />до начала сделки.</h2><p>В рабочей версии каждую заявку сопровождает оператор, а условия сохраняются в защищённой базе.</p></div>
+          <div class="benefit-grid"><article><span>01</span><b>◇</b><h3>Прозрачный расчёт</h3><p>Курс, комиссия и итоговая сумма видны до отправки заявки.</p></article><article><span>02</span><b>◉</b><h3>Человек на связи</h3><p>Оператор уточняет детали и сопровождает обмен на каждом шаге.</p></article><article><span>03</span><b>✓</b><h3>Контроль сделки</h3><p>Обмен начинается только после подтверждения условий клиентом.</p></article></div>
+        </section>
+
+        <section id="how" class="how page-width"><div class="section-heading compact"><small>Три шага</small><h2>Всё просто.</h2><p>В рабочей версии заявка создаётся за минуту.</p></div><ol><li><span>01</span><div><h3>Рассчитайте сумму</h3><p>Выберите направление и сразу увидите курс и итог.</p></div><b>→</b></li><li><span>02</span><div><h3>Оставьте контакты</h3><p>Укажите удобный способ связи с оператором.</p></div><b>→</b></li><li><span>03</span><div><h3>Завершите обмен</h3><p>Подтвердите детали и проведите сделку.</p></div><b>→</b></li></ol></section>
+
+        <section id="rates" class="rates page-width"><div class="section-heading compact"><small>Направления</small><h2>Демонстрационные курсы.</h2></div><div id="rateTable" class="rates-table"></div></section>
+
+        <section class="cta page-width"><div><small>Особый запрос?</small><h2>Обсудим индивидуальный курс и удобный формат обмена.</h2><p>В полной версии оператор предложит решение под вашу сумму и направление.</p><button id="openModal2" type="button">Посмотреть форму <span>→</span></button></div><div class="orbit" aria-hidden="true"><i></i><i></i><i></i></div></section>
+      </section>
+
+      <footer class="footer page-width"><div><a class="brand" href="#top"><i>Н</i><span>Название</span></a><p>Статическая демонстрация. Не является публичной офертой и не выполняет финансовые операции.</p></div><div><a href="./admin/">Панель оператора — демо ↗</a><span>GitHub Pages · noindex</span></div></footer>
+    </main>
+
+    <div id="modal" class="modal" hidden>
+      <section role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button id="closeModal" class="modal-close" aria-label="Закрыть">×</button><p class="modal-kicker">Статическая демонстрация</p><h2 id="modalTitle">Куда вам написать?</h2><p class="modal-copy">Контакты не передаются и не сохраняются.</p><div class="modal-summary"><span id="modalFrom">1 000 USDT</span><b>→</b><strong id="modalTo">91 197 RUB</strong></div><form id="demoForm"><label>Ваше имя<input required placeholder="Алексей" /></label><label>Контакт<input required placeholder="@username или телефон" /></label><div class="pills"><button type="button" class="active">Telegram</button><button type="button">WhatsApp</button><button type="button">Телефон</button></div><button class="primary-button" type="submit">Показать результат <span>→</span></button></form><div id="success" class="success" hidden><i>✓</i><h3>Интерфейс работает.</h3><p>Это статическая демоверсия: заявка не отправлена и данные не сохранены.</p><button id="done" type="button">Готово</button></div></section>
+    </div>
+    <script src="./app.js" defer></script>
+  </body>
+</html>
